@@ -1,0 +1,13 @@
+<h1>Flats#index</h1>
+<p>Find me in app/views/flats/index.html.erb</p>
+
+<ul>
+  <% @flats.each do |flat| %>
+    <li>
+      <p>
+        <%= link_to flat["name"], flat_path(flat["id"]) %>
+        <%= flat["price"] %> <%= flat["priceCurrency"] %>
+      </p>
+    </li>
+  <% end %>
+</ul>
